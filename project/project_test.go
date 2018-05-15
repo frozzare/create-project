@@ -8,9 +8,8 @@ import (
 )
 
 func TestProject(t *testing.T) {
-	os.RemoveAll("./testdata/test")
-
 	for _, src := range []string{"./testdata/project", "./testdata/project2"} {
+		os.RemoveAll("./testdata/test")
 
 		p := New(Source(src), Destination("./testdata/test"))
 
@@ -26,7 +25,5 @@ func TestProject(t *testing.T) {
 		if strings.TrimSpace(string(buf)) != "var app = function () {};" {
 			t.Fatal("Expected main.js to be equal")
 		}
-
-		os.RemoveAll("./testdata/test")
 	}
 }

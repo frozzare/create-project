@@ -1,0 +1,7 @@
+{
+    "name": "simple",
+    "test": "{{ .name }}",
+    "docker_web_port": 8081,
+    "docker_db_port": 5433,
+    "city": ["stockholm", "oslo"]
+}

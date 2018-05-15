@@ -182,18 +182,6 @@ func (p *Project) clone() error {
 	return copy.Copy(p.src, p.dst)
 }
 
-func (p *Project) rename(oldPath string, fi os.FileInfo, err error) error {
-	if err != nil {
-		return err
-	}
-
-	if oldPath[0] == '.' {
-		return nil
-	}
-
-	return nil
-}
-
 func (p *Project) process(oldPath string, fi os.FileInfo, err error) error {
 	if err != nil {
 		if !strings.Contains(strings.ToLower(err.Error()), "lstat") {

@@ -40,6 +40,21 @@ You can also use a git url:
 create-project https://github.com/user/my-boilerplate.git dest-folder
 ```
 
+## Labels
+
+You can add labels to all fields using a another JSON structure in your `project.json`
+
+```js
+{
+    "fields": {
+        "name": "app"
+    },
+    "labels": {
+        "name": "Name"
+    }
+}
+```
+
 ## License
 
 MIT © [Fredrik Forsmo](https://github.com/frozzare)

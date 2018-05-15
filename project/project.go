@@ -27,6 +27,11 @@ type File struct {
 	} `json:"meta"`
 }
 
+// Empty returns true if a file struct is empty.
+func (f *File) Empty() bool {
+	return len(f.Fields) == 0 && len(f.Lables) == 0
+}
+
 // Project represents a project.
 type Project struct {
 	file *File
@@ -72,7 +77,9 @@ func (p *Project) readFile() error {
 		return err
 	}
 
-	if err := json.Unmarshal(buf, &p.file); err != nil {
+	err = json.Unmarshal(buf, &p.file)
+
+	if err != nil || p.file == nil || p.file.Empty() {
 		var fields map[string]interface{}
 		if err := json.Unmarshal(buf, &fields); err != nil {
 			return err
@@ -126,6 +133,11 @@ func (p *Project) readString(key, value string) (string, error) {
 		Default: value,
 	}, &output, nil)
 
+	if err.Error() == "EOF" {
+		output = value
+		err = nil
+	}
+
 	return strings.TrimSpace(output), err
 }
 
@@ -145,6 +157,16 @@ func (p *Project) readSelect(key string, value []interface{}) (string, error) {
 		Message: key,
 		Options: options,
 	}, &output, nil)
+
+	if err.Error() == "EOF" {
+		if len(options) == 0 {
+			output = ""
+		} else {
+			output = options[0]
+		}
+
+		err = nil
+	}
 
 	return strings.TrimSpace(output), err
 }

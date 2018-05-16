@@ -60,6 +60,10 @@ func (p *Project) Create() error {
 		return err
 	}
 
+	if _, err := os.Stat(filepath.Join(p.dst, projectFilename)); os.IsNotExist(err) {
+		return nil
+	}
+
 	if err := p.readFile(); err != nil {
 		return err
 	}

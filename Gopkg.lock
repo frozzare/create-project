@@ -3,7 +3,14 @@
 
 [[projects]]
   name = "github.com/emirpasic/gods"
-  packages = ["containers","lists","lists/arraylist","trees","trees/binaryheap","utils"]
+  packages = [
+    "containers",
+    "lists",
+    "lists/arraylist",
+    "trees",
+    "trees/binaryheap",
+    "utils"
+  ]
   revision = "f6c17b524822278a87e3b3bd809fec33b51f5b46"
   version = "v1.9.0"
 
@@ -41,13 +48,13 @@
   branch = "master"
   name = "github.com/mitchellh/go-homedir"
   packages = ["."]
-  revision = "b8bc1bf767474819792c23f32d8286a45736f1c6"
+  revision = "58046073cbffe2f25d425fe1331102f55cf719de"
 
 [[projects]]
   branch = "master"
   name = "github.com/otiai10/copy"
   packages = ["."]
-  revision = "c59d460454b7a0c318e59595cb3ea22a41ba2572"
+  revision = "7e9a647135a142c2669943d4a4d29be015ce9392"
 
 [[projects]]
   name = "github.com/pelletier/go-buffruneio"
@@ -69,57 +76,141 @@
 
 [[projects]]
   name = "github.com/src-d/gcfg"
-  packages = [".","scanner","token","types"]
+  packages = [
+    ".",
+    "scanner",
+    "token",
+    "types"
+  ]
   revision = "f187355171c936ac84a82793659ebb4936bc1c23"
   version = "v1.3.0"
 
 [[projects]]
-  branch = "master"
   name = "github.com/xanzy/ssh-agent"
   packages = ["."]
-  revision = "ba9c9e33906f58169366275e3450db66139a31a9"
+  revision = "640f0ab560aeb89d523bb6ac322b1244d5c3796c"
+  version = "v0.2.0"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = ["cast5","curve25519","ed25519","ed25519/internal/edwards25519","internal/chacha20","openpgp","openpgp/armor","openpgp/elgamal","openpgp/errors","openpgp/packet","openpgp/s2k","poly1305","ssh","ssh/agent","ssh/knownhosts"]
-  revision = "94e3fad7f1b4eed4ec147751ad6b4c4d33f00611"
+  packages = [
+    "cast5",
+    "curve25519",
+    "ed25519",
+    "ed25519/internal/edwards25519",
+    "internal/chacha20",
+    "internal/subtle",
+    "openpgp",
+    "openpgp/armor",
+    "openpgp/elgamal",
+    "openpgp/errors",
+    "openpgp/packet",
+    "openpgp/s2k",
+    "poly1305",
+    "ssh",
+    "ssh/agent",
+    "ssh/knownhosts",
+    "ssh/terminal"
+  ]
+  revision = "de0752318171da717af4ce24d0a2e8626afaeb11"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context"]
-  revision = "2491c5de3490fced2f6cff376127c667efeed857"
+  revision = "c39426892332e1bb5ec0a434a079bf82f5d30c54"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = ["unix","windows"]
-  revision = "d0faeb539838e250bd0a9db4182d48d4a1915181"
+  packages = [
+    "unix",
+    "windows"
+  ]
+  revision = "1c9583448a9c3aa0f9a6a5241bf73c0bd8aafded"
 
 [[projects]]
   name = "golang.org/x/text"
-  packages = ["internal/gen","internal/triegen","internal/ucd","transform","unicode/cldr","unicode/norm"]
+  packages = [
+    "internal/gen",
+    "internal/triegen",
+    "internal/ucd",
+    "transform",
+    "unicode/cldr",
+    "unicode/norm"
+  ]
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
   version = "v0.3.0"
 
 [[projects]]
   name = "gopkg.in/AlecAivazis/survey.v1"
-  packages = [".","core","terminal"]
-  revision = "e752db451e07e09c7d7dc8cada807a44bdb0fd47"
-  version = "v1.5.3"
+  packages = [
+    ".",
+    "core",
+    "terminal"
+  ]
+  revision = "17861e192dc11fd2f5081df1932c94cce262fa1e"
+  version = "v1.6.1"
 
 [[projects]]
   name = "gopkg.in/src-d/go-billy.v4"
-  packages = [".","helper/chroot","helper/polyfill","osfs","util"]
-  revision = "df053870ae7070b0350624ba5a22161ba3796cc0"
-  version = "v4.1.1"
+  packages = [
+    ".",
+    "helper/chroot",
+    "helper/polyfill",
+    "osfs",
+    "util"
+  ]
+  revision = "83cf655d40b15b427014d7875d10850f96edba14"
+  version = "v4.2.0"
 
 [[projects]]
   name = "gopkg.in/src-d/go-git.v4"
-  packages = [".","config","internal/revision","plumbing","plumbing/cache","plumbing/filemode","plumbing/format/config","plumbing/format/diff","plumbing/format/gitignore","plumbing/format/idxfile","plumbing/format/index","plumbing/format/objfile","plumbing/format/packfile","plumbing/format/pktline","plumbing/object","plumbing/protocol/packp","plumbing/protocol/packp/capability","plumbing/protocol/packp/sideband","plumbing/revlist","plumbing/storer","plumbing/transport","plumbing/transport/client","plumbing/transport/file","plumbing/transport/git","plumbing/transport/http","plumbing/transport/internal/common","plumbing/transport/server","plumbing/transport/ssh","storage","storage/filesystem","storage/filesystem/internal/dotgit","storage/memory","utils/binary","utils/diff","utils/ioutil","utils/merkletrie","utils/merkletrie/filesystem","utils/merkletrie/index","utils/merkletrie/internal/frame","utils/merkletrie/noder"]
-  revision = "b30763cb64afa91c016b23e905af0a378eb1b76d"
-  version = "v4.3.1"
+  packages = [
+    ".",
+    "config",
+    "internal/revision",
+    "plumbing",
+    "plumbing/cache",
+    "plumbing/filemode",
+    "plumbing/format/config",
+    "plumbing/format/diff",
+    "plumbing/format/gitignore",
+    "plumbing/format/idxfile",
+    "plumbing/format/index",
+    "plumbing/format/objfile",
+    "plumbing/format/packfile",
+    "plumbing/format/pktline",
+    "plumbing/object",
+    "plumbing/protocol/packp",
+    "plumbing/protocol/packp/capability",
+    "plumbing/protocol/packp/sideband",
+    "plumbing/revlist",
+    "plumbing/storer",
+    "plumbing/transport",
+    "plumbing/transport/client",
+    "plumbing/transport/file",
+    "plumbing/transport/git",
+    "plumbing/transport/http",
+    "plumbing/transport/internal/common",
+    "plumbing/transport/server",
+    "plumbing/transport/ssh",
+    "storage",
+    "storage/filesystem",
+    "storage/filesystem/dotgit",
+    "storage/memory",
+    "utils/binary",
+    "utils/diff",
+    "utils/ioutil",
+    "utils/merkletrie",
+    "utils/merkletrie/filesystem",
+    "utils/merkletrie/index",
+    "utils/merkletrie/internal/frame",
+    "utils/merkletrie/noder"
+  ]
+  revision = "3bd5e82b2512d85becae9677fa06b5a973fd4cfb"
+  version = "v4.5.0"
 
 [[projects]]
   name = "gopkg.in/warnings.v0"
@@ -127,9 +218,18 @@
   revision = "ec4a0fea49c7b46c2aeb0b51aac55779c607e52b"
   version = "v0.1.2"
 
+[[projects]]
+  name = "mvdan.cc/sh"
+  packages = [
+    "interp",
+    "syntax"
+  ]
+  revision = "fb481a126503bd1e540f479c0e281c3c47739047"
+  version = "v2.5.1"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7f15e07b8f552a5f153365bdc5369a89f7210ec69fdde1bcb3f8ead9ba6f490a"
+  inputs-digest = "4e399dd8806f602655a8b6a8b5a6bc0cabe0dcffc1189bc4a41c02fdfcd5f6fc"
   solver-name = "gps-cdcl"
   solver-version = 1

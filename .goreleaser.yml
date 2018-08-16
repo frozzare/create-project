@@ -1,6 +1,7 @@
 build:
   main: main.go
   binary: create-project
+  ldflags: -s -w -X main.version={{.Version}}
   goos:
     - darwin
     - linux

@@ -2,6 +2,8 @@
 
 Create project is a command line tool for create new project from a boilerplate.
 
+Check out the [examples](https://github.com/frozzare/create-project/tree/master/examples).
+
 ## Installation
 
 ```

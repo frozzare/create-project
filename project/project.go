@@ -20,9 +20,10 @@ const projectFilename = "project.json"
 
 // File represents a project file.
 type File struct {
-	Lables map[string]string      `json:"labels"`
-	Fields map[string]interface{} `json:"fields"`
-	Meta   struct {
+	Commands []string               `json:"commands"`
+	Lables   map[string]string      `json:"labels"`
+	Fields   map[string]interface{} `json:"fields"`
+	Meta     struct {
 		Name string
 	} `json:"meta"`
 }
@@ -137,7 +138,7 @@ func (p *Project) readString(key, value string) (string, error) {
 		Default: value,
 	}, &output, nil)
 
-	if err.Error() == "EOF" {
+	if err != nil && err.Error() == "EOF" {
 		output = value
 		err = nil
 	}
@@ -238,7 +239,13 @@ func (p *Project) process(oldPath string, fi os.FileInfo, err error) error {
 		return errors.Wrap(err, "file template")
 	}
 
-	return ioutil.WriteFile(path, []byte(s), fi.Mode())
+	if err := ioutil.WriteFile(path, []byte(s), fi.Mode()); err != nil {
+		return err
+	}
+
+	return Exec(&Options{
+		Command: strings.Join(p.file.Commands, "\n"),
+	})
 }
 
 func (p *Project) clean() error {

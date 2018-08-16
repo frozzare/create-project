@@ -55,6 +55,24 @@ You can add labels to all fields using a another JSON structure in your `project
 }
 ```
 
+## Commands
+
+Commands array can be added when using labels. The commands will be executed after the project is generated.
+
+```js
+{
+    "fields": {
+        "name": "app"
+    },
+    "labels": {
+        "name": "Name"
+    },
+    "commands": [
+        "touch test"
+    ]
+}
+```
+
 ## License
 
 MIT © [Fredrik Forsmo](https://github.com/frozzare)

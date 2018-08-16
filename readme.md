@@ -10,7 +10,11 @@ Create project is a command line tool for create new project from a boilerplate.
 go get -u github.com/frozzare/create-project
 ```
 
-Or download the release from release page.
+or using [homebrew](https://brew.sh/).
+
+```
+brew install frozzare/tap/create-project
+```
 
 ## Usage
 

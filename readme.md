@@ -46,7 +46,7 @@ create-project https://github.com/user/my-boilerplate.git dest-folder
 
 ## Labels
 
-You can add labels to all fields using a another JSON structure in your `project.json`
+You can add labels to all fields using another JSON structure in your `project.json`
 
 ```js
 {
